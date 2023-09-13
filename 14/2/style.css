@@ -57,6 +57,9 @@
 }
 
 /* Button2 : X */
+#btn2 {
+    z-index: 100;
+}
 
 #btn2::after {
     /* before and after are pseudo elements (that are children of the parent )*/
@@ -70,10 +73,15 @@
     content: "";
     width: 100%;
     height: 100%;
+    z-index: -100;
 }
 
 #btn2:hover::after {
     transform: translateX(0%);
+}
+
+#btn3 {
+    z-index: 100;
 }
 
 /* Button 3: Rotate */
@@ -89,6 +97,7 @@
     content: "";
     width: 100%;
     height: 100%;
+    z-index: -100;
 }
 
 #btn3:hover::before {
@@ -109,7 +118,7 @@
 /* Button 5: Skew */
 #btn5 {
 
-    transition: all 2.5s;
+    transition: all 2s;
 
 }
 
