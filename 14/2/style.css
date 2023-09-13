@@ -1,0 +1,119 @@
+* {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    padding: 13px 20px;
+    color: #333;
+    border: solid black;
+    cursor: pointer;
+    margin: 1em;
+}
+
+#parent-box {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: gray;
+    width: 50vw;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#parent-box section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button1 : X */
+#btn1::after {
+    /* before and after are pseudo elements (that are children of the parent )*/
+    position: absolute;
+    background-color: red;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: all 2.5s;
+    /* pseudo elements don't work without this attr*/
+    content: "Cool!";
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#btn1:hover::after {
+    transform: translateY(0%);
+}
+
+/* Button2 : X */
+
+#btn2::after {
+    /* before and after are pseudo elements (that are children of the parent )*/
+    position: absolute;
+    background-color: blue;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 2.5s;
+    /* pseudo elements don't work without this attr*/
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+#btn2:hover::after {
+    transform: translateX(0%);
+}
+
+/* Button 3: Rotate */
+#btn3::before {
+    /* before and after are pseudo elements (that are children of the parent )*/
+    position: absolute;
+    background-color: yellow;
+    top: 0;
+    left: -3vw;
+    transform: translateX(-3vw) rotate(90deg);
+    transition: all 2.5s;
+    /* pseudo elements don't work without this attr*/
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+#btn3:hover::before {
+    transform: translateX(3vw) rotate(0deg);
+}
+
+/* Button 4: Scale */
+#btn4 {
+
+    transition: all 2.5s;
+
+}
+
+#btn4:hover {
+    transform: scale(2);
+}
+
+/* Button 5: Skew */
+#btn5 {
+
+    transition: all 2.5s;
+
+}
+
+#btn5:hover {
+    transform: skew(20deg);
+    background-color: plum;
+}

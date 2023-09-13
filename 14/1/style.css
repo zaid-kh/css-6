@@ -1,0 +1,27 @@
+#parent-box {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: crimson;
+    width: 50vw;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#parent-box::after {
+    /* before and after are pseudo elements (that are children of the parent )*/
+    position: absolute;
+    background-color: aqua;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: all 2.5s;
+    /* pseudo elements don't work without this attr*/
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+
+#parent-box:hover::after {
+    transform: translateX(0%);
+}
